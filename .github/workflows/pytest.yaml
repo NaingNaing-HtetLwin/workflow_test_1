@@ -34,3 +34,10 @@ jobs:
 
       - name: Print secrets
         run: echo "NAINGNAING_API_KEY -> ${{ secrets.NAINGNAING_API_KEY}}"
+
+      - name: Get time
+        id: get_time
+        run: echo "time=$(date)" >> $GITHUB_OUTPUT
+
+      - name: Print github output
+        run: echo "一つ前のstepの出力は${{ steps.get_time.outputs.time}}です"
