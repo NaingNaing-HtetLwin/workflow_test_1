@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-        working-directory: src
+        working-directory: workflow_test_1
 
 
       - name: Run pytest
